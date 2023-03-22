@@ -6,6 +6,7 @@ def menu():
     print("3. Quit \n")
 
 
+# encodes the password by adding 3 to each string
 def encode(value):
     new_value = ""
 
@@ -15,6 +16,7 @@ def encode(value):
     return new_value
 
 
+# decodes password by subtracting 3 from each string
 def decode(new_value):
     original_value = ""
 
@@ -27,7 +29,7 @@ def decode(new_value):
 if __name__ == "__main__":
 
     cont = True
-
+    # menu option that breaks if option is 3
     while cont:
         menu()
         option = int(input("Please enter an option: "))
