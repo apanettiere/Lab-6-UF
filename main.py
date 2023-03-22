@@ -17,13 +17,13 @@ def encode(value):
 
 
 # decodes password by subtracting 3 from each string
-def decode(new_value):
-    original_value = ""
-
-    for char in new_value:
-        encoded_value = str((int(char) - 3) % 10)
-        original_value += encoded_value
-    return original_value
+def decode(password):
+    password = int(password)
+    password_list = [int(i) for i in str(password)]
+    old_password = [i - 3 for i in password_list]
+    old_password = [str(i) for i in old_password]
+    old_password = ''.join(old_password)
+    return old_password
 
 
 if __name__ == "__main__":
